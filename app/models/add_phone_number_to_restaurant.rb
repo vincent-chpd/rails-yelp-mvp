@@ -1,0 +1,2 @@
+class AddPhoneNumberToRestaurant < ApplicationRecord
+end
