@@ -1,2 +1,38 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="review-header">
+  <p class="review-title"><%= @restaurant.name %></p>
+  <img src="https://scdn.aro.ie/Sites/50/imperialhotels2022/uploads/images/PanelImages/General/156757283_Bedford_Hotel__F_B__Botanica_Restaurant_and_Bar__General_View._4500x3000.jpg")>
+</div>
+
+
+<div class="container mt-4">
+
+  <h1>Reviews</h1>
+  <div class="d-flex">
+    <p>⭐️⭐️⭐️⭐️☆</p>
+    <p>(5 Reviews)</p>
+  </div>
+
+
+  <div class="d-flex">
+    <button class="btn btn-warning mb-2"> <%= link_to "Write a review", new_restaurant_review_path(@restaurant.id),class: "link" %></button>
+    <button class="btn btn-secondary mb-2"> <%= link_to "Back to restautants", restaurants_path, class: "link" %></button>
+
+  </div>
+
+</div>
+
+
+<div class="container mt-3">
+
+  <h3>Reviews</h3>
+
+  <div class="review-card">
+
+    <div class="card-product-infos d-flex">
+      <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+      <p>Great food!</p>
+    </div>
+
+  </div>
+
+</div>

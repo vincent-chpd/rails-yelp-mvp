@@ -1,32 +1,39 @@
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&family=Protest+Riot&display=swap');
+@import "./avatar.css";
+@import "./restaurant-card.css";
+@import "./review-card.css";
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
 
-.card-product h2 {
-  font-size: 16px;
+h1 {
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  margin: 0;
+  font-size: 56px;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+
+.review-header{
+  position: relative;
+  margin: 0 auto;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.review-header img{
+  width: 100vw;
+  object-fit: cover;
+  height: 400px;
+  opacity: 0.8;
+}
+
+
+.review-title {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  backdrop-filter: blur(1px);
+  z-index: 1;
+  font-size: 52px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
 }

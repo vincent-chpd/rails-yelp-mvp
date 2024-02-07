@@ -1,4 +1,5 @@
 require 'faker'
+Faker::Config.locale = 'en-GB'
 
 puts "Cleaning database..."
 Restaurant.destroy_all

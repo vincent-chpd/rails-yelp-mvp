@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :restaurants, only: %i[index show new create] do
-    resources :reviews, only: %i[new create]
+  get 'reviews/new'
+  get 'reviews/create'
+  resources :restaurants, only: [:index, :show, :new, :create] do
+    resources :reviews, only: [:new, :create]
   end
 end
