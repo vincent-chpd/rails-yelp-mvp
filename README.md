@@ -1,24 +1,23 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails Yelp MVP
+This repository contains the code for a Rails app developed as part of a challenge to build a two-model Rails app with a restaurant and anonymous reviews.
 
-Things you may want to cover:
+## User Stories
+The application follows the following user stories:
 
-* Ruby version
+1. A visitor can see the list of all restaurants.
+- Route: GET "restaurants"
 
-* System dependencies
+2. A visitor can add a new restaurant and be redirected to the show view of that new restaurant.
+- Routes:
+  - GET "restaurants/new"
+  - POST "restaurants"
+    
+3. A visitor can see the details of a restaurant, including all reviews related to the restaurant.
+- Route: GET "restaurants/:id"
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. A visitor can add a new review to a restaurant.
+- Routes:
+  - GET "restaurants/:id/reviews/new"
+  - POST "restaurants/:id/reviews"
+   
