@@ -1,2 +1,16 @@
-<h1>Restaurants#create</h1>
-<p>Find me in app/views/restaurants/create.html.erb</p>
+<div class="review-header">
+  <p class="review-title"><%= @restaurant.name %></p>
+  <img src="https://scdn.aro.ie/Sites/50/imperialhotels2022/uploads/images/PanelImages/General/156757283_Bedford_Hotel__F_B__Botanica_Restaurant_and_Bar__General_View._4500x3000.jpg")>
+</div>
+
+
+<div class="card-container">
+<h3 class="mt-3">Add a new restaurant</h3>
+  <%= simple_form_for (@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category %>
+    <%= f.submit "Add restaurant", class: "btn btn-primary" %>
+  <% end %>
+</div>

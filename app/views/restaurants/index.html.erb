@@ -1,17 +1,19 @@
+<div class="card-container d-flex align-items-center justify-content-between">
+  <h1>Restaurants</h1>
+  <%=  link_to "+ Add a restaurant", new_restaurant_path, class:"btn btn-warning"%>
+</div>
 
 <div class="card-container">
-  <h1>Restaurants</h1>
-
   <% @restaurants.each do |restaurant| %>
-    <div class="card-product d-flex bd-highlight mb-3">
+    <div class="card-product ">
       <img src="https://scdn.aro.ie/Sites/50/imperialhotels2022/uploads/images/PanelImages/General/156757283_Bedford_Hotel__F_B__Botanica_Restaurant_and_Bar__General_View._4500x3000.jpg" />
-      <div class="card-product-infos p-2 bd-highlight">
-        <%= link_to "<h3>#{restaurant.name}</h3>".html_safe, restaurant_path(restaurant.id), class: 'link' %>
-        <p>Address: <%= restaurant.address %></p>
-        <p>Telephone: <%=restaurant.phone_number %></p>
-        <p>Food type: <%=restaurant.category.capitalize %></p>
+      <div class="mx-4">
+          <h3><%= restaurant.name %></h3>
+          <p><%= restaurant.address %></p>
+          <p> <%=restaurant.phone_number %></p>
+          <p> <%=restaurant.category.capitalize %></p>
+        <%= link_to "See details", restaurant_path(restaurant.id), class: "btn btn-secondary mt-3" %>
       </div>
-
     </div>
   <% end %>
 </div>

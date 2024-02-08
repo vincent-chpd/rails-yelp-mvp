@@ -5,34 +5,29 @@
 
 
 <div class="container mt-4">
-
   <h1>Reviews</h1>
   <div class="d-flex">
     <p>⭐️⭐️⭐️⭐️☆</p>
-    <p>(5 Reviews)</p>
+    <p>( <%= @restaurant.reviews.length %>  Reviews)</p>
   </div>
-
 
   <div class="d-flex">
     <button class="btn btn-warning mb-2"> <%= link_to "Write a review", new_restaurant_review_path(@restaurant.id),class: "link" %></button>
     <button class="btn btn-secondary mb-2"> <%= link_to "Back to restautants", restaurants_path, class: "link" %></button>
-
   </div>
-
 </div>
 
 
-<div class="container mt-3">
 
-  <h3>Reviews</h3>
 
-  <div class="review-card">
-
-    <div class="card-product-infos d-flex">
-      <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-      <p>Great food!</p>
+<div class="container mt-5">
+  <h3> Reviews</h3>
+   <% @restaurant.reviews.each do |review| %>
+    <div class="card-product ">
+      <div class="mx-4">
+        <p><%= "⭐️"  * (review.rating) %></p>
+        <p><%= review.content %></p>
+      </div>
     </div>
-
-  </div>
-
+  <% end %>
 </div>
